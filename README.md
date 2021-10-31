@@ -63,3 +63,6 @@ kubectl apply -f deployment-sonar.yaml
 kubectl apply -f service-sonar.yaml
 ```
 
+## Screeshot
+
+Please see the Screenshot folder.
