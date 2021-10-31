@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: application-service
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 1234
+      protocol: TCP
+      targetPort: 1234
+  selector:
+    app: application

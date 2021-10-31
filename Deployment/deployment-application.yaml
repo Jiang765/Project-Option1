@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: application
+  labels:
+    app: application
+spec:
+  selector:
+    matchLabels:
+      app: application
+  minReadySeconds: 15
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: application
+    spec:
+      containers:
+        - image: njiang765/application:latest
+          imagePullPolicy: Always
+          name: terminal
+          ports:
+            - containerPort: 8880
