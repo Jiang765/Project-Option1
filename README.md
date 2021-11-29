@@ -2,7 +2,7 @@
 
 ## Video
 
-Code Walkthrough & Steps & Demo: See the video folders.
+Code Walkthrough & Steps & Demo: Please see the video folders.
 
 ## Steps
 
@@ -90,6 +90,10 @@ Spark
 SonarQube & SonarScanner
 
 ![image-20211128231643359](README.assets/image-20211128231643359.png)
+
+Terminal Application
+
+![image-20211128235732760](README.assets/image-20211128235732760.png)
 
 ### Docker Images URL
 
