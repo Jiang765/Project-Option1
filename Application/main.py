@@ -13,9 +13,9 @@ Please type the number that corresponds to which application you woule like to r
 4. SonarQube and SonarScanner
 
 visit Apache Hadoop: http://34.134.156.140:9870
-visit Apache Spark: http://34.132.63.235:8888
-visit Jupyter Notebook: http://34.68.3.207:9000
-visit SonarQube and SonarScanner: http://34.136.31.24:8080
+visit Jupyter Notebook: http://34.132.63.235:8888
+visit SonarQube and SonarScanner: http://34.68.3.207:9000
+visit Apache Spark: http://34.136.31.24:8080
 """
 
     # 'HTTP/1.1 200 OK\n' + \
