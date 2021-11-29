@@ -1,5 +1,9 @@
 # Project_Option1
 
+## Video
+
+Code Walkthrough & Steps & Demo: See the video folders.
+
 ## Steps
 
 ### Deployment
@@ -33,9 +37,6 @@ Relevent configuration files (.yaml) are in the Deployment folder.
 ```bash
 cd Project-Option1/Deployment
 
-kubectl apply -f deployment-application.yaml
-kubectl apply -f service-application.yaml
-
 kubectl apply -f deployment-hadoop.yaml
 kubectl apply -f service-hadoop.yaml
 
@@ -55,7 +56,22 @@ Note that to support 1 NameNode and 2 DataNodes for Hadoop, we need to add envir
 
 Hadoop environment variable reference: https://github.com/big-data-europe/docker-hadoop/blob/master/hadoop.env
 
+c. Deploy the terminal application
+
+```bash
+kubectl apply -f deployment-application.yaml
+kubectl apply -f service-application.yaml
+```
+
+If the endpoints are not mathed with the display values, you have to replace them with the newest ones and rebuild the image.
+
 Step 4: Check result
+
+GCP Console
+
+![image-20211128232652798](README.assets/image-20211128232652798.png)
+
+Cloud Shell
 
 ![image-20211128231323010](README.assets/image-20211128231323010.png)
 
