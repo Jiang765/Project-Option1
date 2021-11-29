@@ -49,9 +49,31 @@ kubectl apply -f deployment-sonar.yaml
 kubectl apply -f service-sonar.yaml
 ```
 
+![image-20211128230931158](README.assets/image-20211128230931158.png)
+
 Note that to support 1 NameNode and 2 DataNodes for Hadoop, we need to add environment variables in the configuration file. 
 
 Hadoop environment variable reference: https://github.com/big-data-europe/docker-hadoop/blob/master/hadoop.env
+
+Step 4: Check result
+
+![image-20211128231323010](README.assets/image-20211128231323010.png)
+
+Hadoop
+
+![image-20211128231524606](README.assets/image-20211128231524606.png)
+
+Jupyter Notebook
+
+![image-20211128231552159](README.assets/image-20211128231552159.png)
+
+Spark
+
+![image-20211128231619159](README.assets/image-20211128231619159.png)
+
+SonarQube & SonarScanner
+
+![image-20211128231643359](README.assets/image-20211128231643359.png)
 
 ### Docker Images URL
 
@@ -77,7 +99,7 @@ Hadoop environment variable reference: https://github.com/big-data-europe/docker
 
 ### Source Code of Terminal Application
 
-Please see the Application folder
+Please see the Application folder.
 
 ## Screeshot for Checkpoint
 
