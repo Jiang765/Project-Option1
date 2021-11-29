@@ -8,8 +8,10 @@ spec:
   - port: 9870
     protocol: TCP
     targetPort: 9870
+    name: external
   - port: 9000
     protocol: TCP
     targetPort: 9000
+    name: internal
   selector:
     app: hadoop-namenode
