@@ -26,9 +26,25 @@ spec:
         env:
           - name: CLUSTER_NAME
             value: "hadoop"
+          - name: CORE_CONF_fs_defaultFS
+            value: "hdfs://namenode:9000"
+          - name: CORE_CONF_hadoop_http_staticuser_user
+            value: "root"
+          - name: CORE_CONF_hadoop_proxyuser_hue_hosts
+            value: "*"
+          - name: CORE_CONF_hadoop_proxyuser_hue_groups
+            value: "*"
+          - name: CORE_CONF_io_compression_codecs
+            value: "org.apache.hadoop.io.compress.SnappyCodec"
+          - name: HDFS_CONF_dfs_webhdfs_enabled
+            value: "true"
+          - name: HDFS_CONF_dfs_permissions_enabled
+            value: "false"
+          - name: HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check
+            value: "false"
         ports:
           - containerPort: 9870
-
+          - containerPort: 9000
 ---
 
 apiVersion: apps/v1
@@ -59,6 +75,22 @@ spec:
           name: hadoop-datanode
           env:
           - name: SERVICE_PRECONDITION
-            value: "namenode:9870"
+            value: "hadoop-service:9000"
           - name: CLUSTER_NAME
             value: "hadoop"
+          - name: CORE_CONF_fs_defaultFS
+            value: "hdfs://hadoop-service:9000"
+          - name: CORE_CONF_hadoop_http_staticuser_user
+            value: "root"
+          - name: CORE_CONF_hadoop_proxyuser_hue_hosts
+            value: "*"
+          - name: CORE_CONF_hadoop_proxyuser_hue_groups
+            value: "*"
+          - name: CORE_CONF_io_compression_codecs
+            value: "org.apache.hadoop.io.compress.SnappyCodec"
+          - name: HDFS_CONF_dfs_webhdfs_enabled
+            value: "true"
+          - name: HDFS_CONF_dfs_permissions_enabled
+            value: "false"
+          - name: HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check
+            value: "false"
